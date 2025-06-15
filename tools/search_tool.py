@@ -3,7 +3,7 @@ from langchain_community.tools import DuckDuckGoSearchRun,tool
 @tool
 def search(query: str) -> str:
     """
-    Search the web for the given query and return the results.
+    Search the web for the latest news articles about company and return the results.
     
     Args:
         query (str): The search query.
