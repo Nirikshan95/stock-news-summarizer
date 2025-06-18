@@ -3,12 +3,11 @@ from tools.search_tool import search
 from chains.summarization_chain import get_summarized_news
 
 def main():
-    st.title("Search Tool Example")
-    
+    st.title("Stock News Summarizer")
     company = st.text_input("Enter a company name to get the latest news summary:")
-    if st.button("Get NEWS Summary"):
+    if st.button("Get Summarized NEWS "):
         if company:
-            with st.spinner("Fetching summary..."):
+            with st.spinner("Fetching news..."):
                 summary = get_summarized_news(company)
                 st.markdown(summary)
         else:
